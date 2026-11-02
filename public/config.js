@@ -15,19 +15,22 @@ window.ROUE_CONFIG = {
   // Validité affichée sur l'écran gagnant
   validite: "Valable aujourd'hui uniquement, dans votre boutique Galzin",
 
+  // Page d'activation de la carte de fidélité (bouton "Pas encore de carte ?")
+  fideliteUrl: "https://www.galzin.fr/fidelite/",
+
   // Lien vers le règlement du jeu (PDF ou page)
   reglementUrl: "#reglement",
 
   // Lots utilisés UNIQUEMENT en mode démo.
   // En production, les lots viennent de la table Supabase "lots".
   lotsDemo: [
-    { id: "pac20",     titre: "-20%",    sous_titre: "Pain au choc",   description: "-20 % sur vos pains au chocolat", couleur: "#572d14", poids: 25 },
-    { id: "cafe",      titre: "OFFERT",  sous_titre: "Café",           description: "Un café offert",                  couleur: "#e2132b", poids: 20 },
-    { id: "buche10",   titre: "-10%",    sous_titre: "Bûche de Noël",  description: "-10 % sur votre bûche de Noël",   couleur: "#c99a4a", poids: 12 },
-    { id: "baguette",  titre: "OFFERTE", sous_titre: "Baguette",       description: "Une baguette tradition offerte",  couleur: "#3c1f0e", poids: 15 },
-    { id: "croissant", titre: "OFFERT",  sous_titre: "Croissant",      description: "Un croissant offert",             couleur: "#e2132b", poids: 10 },
-    { id: "choco",     titre: "OFFERT",  sous_titre: "Chocolat chaud", description: "Un chocolat chaud offert",        couleur: "#572d14", poids: 8 },
-    { id: "pacoff",    titre: "OFFERT",  sous_titre: "Pain au choc",   description: "Un pain au chocolat offert",      couleur: "#c99a4a", poids: 7 },
-    { id: "panier10",  titre: "-10%",    sous_titre: "Tout le panier", description: "-10 % sur tout votre panier",     couleur: "#3c1f0e", poids: 3 },
+    { id: "pac20",     titre: "-20%",    sous_titre: "Pain au choc",   description: "-20 % sur vos pains au chocolat", couleur: "#c8162f", poids: 25 },
+    { id: "cafe",      titre: "OFFERT",  sous_titre: "Café",           description: "Un café offert",                  couleur: "#fdf0e2", poids: 20 },
+    { id: "buche10",   titre: "-10%",    sous_titre: "Bûche de Noël",  description: "-10 % sur votre bûche de Noël",   couleur: "#1f6b3a", poids: 12 },
+    { id: "baguette",  titre: "OFFERTE", sous_titre: "Baguette",       description: "Une baguette tradition offerte",  couleur: "#c99a4a", poids: 15 },
+    { id: "croissant", titre: "OFFERT",  sous_titre: "Croissant",      description: "Un croissant offert",             couleur: "#c8162f", poids: 10 },
+    { id: "choco",     titre: "OFFERT",  sous_titre: "Chocolat chaud", description: "Un chocolat chaud offert",        couleur: "#fdf0e2", poids: 8 },
+    { id: "pacoff",    titre: "OFFERT",  sous_titre: "Pain au choc",   description: "Un pain au chocolat offert",      couleur: "#1f6b3a", poids: 7 },
+    { id: "panier10",  titre: "-10%",    sous_titre: "Tout le panier", description: "-10 % sur tout votre panier",     couleur: "#c99a4a", poids: 3 },
   ],
 };

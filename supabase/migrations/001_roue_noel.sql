@@ -150,12 +150,12 @@ grant execute on function public.tourner_roue(text, text, text) to anon, authent
 -- Lots proposés (à ajuster) — total des poids = 100 → poids = % de chance
 -- ---------------------------------------------------------------------------
 insert into public.lots (id, ordre, titre, sous_titre, description, couleur, poids) values
-  ('pac20',     1, '-20%',     'Pain au choc',        '-20 % sur vos pains au chocolat',               '#572d14', 25),
-  ('cafe',      2, 'OFFERT',   'Café',                'Un café offert',                               '#e2132b', 20),
-  ('buche10',   3, '-10%',     'Bûche de Noël',       '-10 % sur votre bûche de Noël',                '#c99a4a', 12),
-  ('baguette',  4, 'OFFERTE',  'Baguette',            'Une baguette tradition offerte',               '#3c1f0e', 15),
-  ('croissant', 5, 'OFFERT',   'Croissant',           'Un croissant offert',                          '#e2132b', 10),
-  ('choco',     6, 'OFFERT',   'Chocolat chaud',      'Un chocolat chaud offert',                     '#572d14', 8),
-  ('pacoff',    7, 'OFFERT',   'Pain au choc',        'Un pain au chocolat offert',                   '#c99a4a', 7),
-  ('panier10',  8, '-10%',     'Tout le panier',      '-10 % sur tout votre panier',                  '#3c1f0e', 3)
+  ('pac20',     1, '-20%',     'Pain au choc',        '-20 % sur vos pains au chocolat',               '#c8162f', 25),
+  ('cafe',      2, 'OFFERT',   'Café',                'Un café offert',                               '#fdf0e2', 20),
+  ('buche10',   3, '-10%',     'Bûche de Noël',       '-10 % sur votre bûche de Noël',                '#1f6b3a', 12),
+  ('baguette',  4, 'OFFERTE',  'Baguette',            'Une baguette tradition offerte',               '#c99a4a', 15),
+  ('croissant', 5, 'OFFERT',   'Croissant',           'Un croissant offert',                          '#c8162f', 10),
+  ('choco',     6, 'OFFERT',   'Chocolat chaud',      'Un chocolat chaud offert',                     '#fdf0e2', 8),
+  ('pacoff',    7, 'OFFERT',   'Pain au choc',        'Un pain au chocolat offert',                   '#1f6b3a', 7),
+  ('panier10',  8, '-10%',     'Tout le panier',      '-10 % sur tout votre panier',                  '#c99a4a', 3)
 on conflict (id) do nothing;

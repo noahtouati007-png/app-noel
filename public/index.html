@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#3c1f0e" />
+  <meta name="theme-color" content="#8e0d1c" />
   <title>La Roue de Noël — Galzin</title>
   <meta name="description" content="Tournez la roue de Noël Galzin et gagnez une surprise à utiliser en boutique." />
   <link rel="icon" href="assets/img/galzin-logo.png" />
@@ -14,6 +14,7 @@
   <!-- Décor animé -->
   <div class="rays" aria-hidden="true"></div>
   <canvas id="snow" aria-hidden="true"></canvas>
+  <div class="pines" aria-hidden="true"></div>
   <div class="garland" aria-hidden="true"></div>
   <canvas id="confetti" aria-hidden="true"></canvas>
 
@@ -33,6 +34,10 @@
       <div class="gift-row" aria-hidden="true"><span>🎁</span><span>🥐</span><span>🎄</span><span>☕</span><span>🎁</span></div>
       <button class="btn btn-main" data-go="s-form">Je tente ma chance</button>
       <p class="fine">1 participation par carte de fidélité et par jour</p>
+      <a class="btn-ghost js-fidelite" href="https://www.galzin.fr/fidelite/" target="_blank" rel="noopener">
+        <small>Pas encore de carte de fidélité&nbsp;?</small>
+        <strong>J'active ma carte Galzin →</strong>
+      </a>
     </section>
 
     <!-- 2. FORMULAIRE -->
@@ -52,6 +57,7 @@
         <label class="field">
           <span>N° de carte de fidélité</span>
           <input name="carte" inputmode="numeric" autocomplete="off" required maxlength="30" placeholder="Au dos de votre carte" />
+          <p class="hint">Pas encore de carte&nbsp;? <a class="js-fidelite" href="https://www.galzin.fr/fidelite/" target="_blank" rel="noopener">Activez-la sur galzin.fr</a>, puis revenez jouer&nbsp;!</p>
         </label>
         <label class="check">
           <input type="checkbox" name="consent" required />

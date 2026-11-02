@@ -97,6 +97,7 @@
 
   /* ---------------- Formulaire ---------------- */
   $("#reglement").href = CFG.reglementUrl;
+  if (CFG.fideliteUrl) document.querySelectorAll(".js-fidelite").forEach((a) => (a.href = CFG.fideliteUrl));
   $("#form").addEventListener("submit", (e) => {
     e.preventDefault();
     const f = e.currentTarget, err = $("#form-error");
@@ -146,7 +147,7 @@
     cx.save(); cx.translate(R, R);
 
     // Couronne
-    cx.beginPath(); cx.arc(0, 0, R - 2, 0, TAU); cx.fillStyle = "#3c1f0e"; cx.fill();
+    cx.beginPath(); cx.arc(0, 0, R - 2, 0, TAU); cx.fillStyle = "#3d050c"; cx.fill();
     cx.beginPath(); cx.arc(0, 0, R - 14, 0, TAU); cx.fillStyle = "#c99a4a"; cx.fill();
 
     const rIn = R - 40;
@@ -167,7 +168,7 @@
       cx.font = `${big}px "Bebas Neue", sans-serif`;
       cx.fillText(lots[i].titre, rIn - 26, -12);
       cx.font = `600 italic 26px "Crimson Pro", serif`;
-      cx.fillStyle = col === "#2a1d14" ? "#3c1f0e" : "#ffcc4d";
+      cx.fillStyle = col === "#2a1d14" ? "#8e0d1c" : "#ffcc4d";
       cx.fillText(lots[i].sous_titre, rIn - 26, 26);
       cx.restore();
     }
@@ -179,7 +180,7 @@
       const a = (i / bulbs) * TAU, lit = (i + bulbPhase) % 2 === 0;
       const x = Math.cos(a) * (R - 22), y = Math.sin(a) * (R - 22);
       cx.beginPath(); cx.arc(x, y, 8, 0, TAU);
-      cx.fillStyle = lit ? "#fff6d8" : "#e2132b";
+      cx.fillStyle = lit ? "#fff6d8" : "#1f6b3a";
       cx.shadowColor = lit ? "#ffcc4d" : "transparent"; cx.shadowBlur = lit ? 18 : 0;
       cx.fill();
     }
