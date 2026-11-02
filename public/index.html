@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#3c1f0e" />
+  <title>La Roue de Noël — Galzin</title>
+  <meta name="description" content="Tournez la roue de Noël Galzin et gagnez une surprise à utiliser en boutique." />
+  <link rel="icon" href="assets/img/galzin-logo.png" />
+  <link rel="preload" href="assets/fonts/bebas-neue-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Décor animé -->
+  <div class="rays" aria-hidden="true"></div>
+  <canvas id="snow" aria-hidden="true"></canvas>
+  <div class="garland" aria-hidden="true"></div>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <button id="sound" class="sound" aria-label="Couper le son" title="Son">🔊</button>
+  <div id="demo" class="demo" hidden>MODE DÉMO · rien n'est enregistré</div>
+
+  <main>
+    <!-- 1. ACCUEIL -->
+    <section id="s-home" class="screen is-active">
+      <img class="logo logo-xl" src="assets/img/galzin-logo.png" alt="Galzin, maison fondée en 1938" />
+      <p class="kicker">Maison Galzin vous offre</p>
+      <h1 class="title">
+        <span class="t-line">LA ROUE</span>
+        <span class="t-line t-big">DE NOËL</span>
+      </h1>
+      <p class="lead">Une surprise gourmande <em>à chaque tour&nbsp;!</em></p>
+      <div class="gift-row" aria-hidden="true"><span>🎁</span><span>🥐</span><span>🎄</span><span>☕</span><span>🎁</span></div>
+      <button class="btn btn-main" data-go="s-form">Je tente ma chance</button>
+      <p class="fine">1 participation par carte de fidélité et par jour</p>
+    </section>
+
+    <!-- 2. FORMULAIRE -->
+    <section id="s-form" class="screen">
+      <img class="logo logo-sm" src="assets/img/galzin-logo.png" alt="Galzin" />
+      <h2 class="h2">VOS INFOS</h2>
+      <p class="lead small">Pour débloquer la roue, <em>présentez-vous&nbsp;!</em></p>
+      <form id="form" class="card" novalidate>
+        <label class="field">
+          <span>Prénom</span>
+          <input name="prenom" autocomplete="given-name" required maxlength="60" placeholder="Marie" />
+        </label>
+        <label class="field">
+          <span>Nom</span>
+          <input name="nom" autocomplete="family-name" required maxlength="60" placeholder="Dupont" />
+        </label>
+        <label class="field">
+          <span>N° de carte de fidélité</span>
+          <input name="carte" inputmode="numeric" autocomplete="off" required maxlength="30" placeholder="Au dos de votre carte" />
+        </label>
+        <label class="check">
+          <input type="checkbox" name="consent" required />
+          <span>J'accepte le <a id="reglement" href="#" target="_blank" rel="noopener">règlement du jeu</a> et que mes informations soient utilisées par Maison Galzin pour ce jeu.</span>
+        </label>
+        <p id="form-error" class="error" role="alert" hidden></p>
+        <button class="btn btn-main" type="submit">Débloquer la roue</button>
+      </form>
+      <button class="link" data-go="s-home">← Retour</button>
+    </section>
+
+    <!-- 3. ROUE -->
+    <section id="s-wheel" class="screen">
+      <p class="kicker" id="hello">À vous de jouer&nbsp;!</p>
+      <h2 class="h2">TOURNEZ LA ROUE</h2>
+      <div class="wheel-wrap" id="wheel-wrap">
+        <div class="pointer" id="pointer" aria-hidden="true"></div>
+        <canvas id="wheel" width="720" height="720" role="img" aria-label="Roue des cadeaux"></canvas>
+        <button class="hub" id="spin" aria-label="Tourner la roue">
+          <img src="assets/img/galzin-logo.png" alt="" />
+          <span>GO</span>
+        </button>
+      </div>
+      <p id="wheel-error" class="error" role="alert" hidden></p>
+      <button class="btn btn-main" id="spin-btn">Tourner&nbsp;!</button>
+    </section>
+
+    <!-- 4. GAGNÉ -->
+    <section id="s-win" class="screen">
+      <p class="kicker" id="win-hello">Bravo&nbsp;!</p>
+      <h2 class="h2 win-title">VOUS AVEZ GAGNÉ</h2>
+      <div class="ticket" id="ticket">
+        <div class="ticket-prize">
+          <span class="prize-big" id="prize-big">-20%</span>
+          <span class="prize-sub" id="prize-sub">Pain au choc</span>
+        </div>
+        <p class="prize-desc" id="prize-desc"></p>
+        <div class="ticket-cut" aria-hidden="true"></div>
+        <p class="scan">Présentez cet écran <em>en caisse</em></p>
+        <img class="qr" id="qr" alt="QR code à scanner en caisse" />
+        <p class="code" id="code">NOEL-XXXX-XXXX</p>
+        <div class="live">
+          <span class="live-dot"></span>
+          <span id="live-clock">--:--:--</span>
+          <span class="live-sep">·</span>
+          <span id="live-date"></span>
+        </div>
+        <p class="validite" id="validite"></p>
+      </div>
+      <p class="fine" id="already" hidden>Vous avez déjà joué aujourd'hui avec cette carte : voici votre cadeau du jour. Revenez demain&nbsp;!</p>
+      <p class="fine">Joyeuses fêtes de la part de toute l'équipe Galzin 🎄</p>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

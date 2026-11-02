@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 210" width="210" height="210">
+  <rect width="210" height="210" rx="12" fill="#fff"/>
+  <rect x="8" y="8" width="194" height="194" rx="8" fill="none" stroke="#c99a4a" stroke-width="3" stroke-dasharray="10 7"/>
+  <g fill="#2a1d14">
+    <rect x="22" y="22" width="48" height="48" rx="6"/><rect x="30" y="30" width="32" height="32" rx="3" fill="#fff"/><rect x="38" y="38" width="16" height="16" rx="2"/>
+    <rect x="140" y="22" width="48" height="48" rx="6"/><rect x="148" y="30" width="32" height="32" rx="3" fill="#fff"/><rect x="156" y="38" width="16" height="16" rx="2"/>
+    <rect x="22" y="140" width="48" height="48" rx="6"/><rect x="30" y="148" width="32" height="32" rx="3" fill="#fff"/><rect x="38" y="156" width="16" height="16" rx="2"/>
+  </g>
+  <text x="105" y="100" text-anchor="middle" font-family="Bebas Neue, sans-serif" font-size="26" fill="#572d14">QR CAISSE</text>
+  <text x="105" y="124" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="13" fill="#7a5232">à fournir par Galzin</text>
+</svg>
