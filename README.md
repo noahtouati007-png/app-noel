@@ -46,3 +46,10 @@ Sans clés Supabase dans `config.js`, l'appli tourne en **mode démo** : tirage 
 ## Mise en ligne
 
 Déployer le repo sur Vercel (le dossier `public/` est servi tel quel, il n'y a pas de build), puis générer le QR code d'affichage magasin qui pointe vers l'URL.
+
+## Légal
+
+- **`public/reglement.html`** (en ligne sur `/reglement.html`) : règlement du jeu, politique de données personnelles (RGPD) et mentions légales (LCEN). La version imprimable est **`docs/reglement-roue-noel-galzin.pdf`**, à garder en caisse puisque le règlement doit pouvoir être remis gratuitement sur demande.
+- **Période du jeu** : table Supabase `parametres` (`debut`, `fin`). En dehors de la période, le jeu est refusé côté serveur. Les cartes dont le numéro commence par **`TEST`** peuvent jouer hors période pour les essais internes. Si tu changes les dates, mets aussi à jour l'article 2 du règlement et le message `JEU_PAS_COMMENCE` dans `public/app.js`.
+- **Purge RGPD** : la tâche planifiée `purge-rgpd-roue-noel` (pg_cron, tous les jours à 3 h 15) supprime les participations de plus de 3 mois, comme annoncé dans la politique de données.
+- Le formulaire comporte la case « majeur(e) + règlement » et la notice d'information RGPD (art. 13). Le footer renvoie vers les trois documents.

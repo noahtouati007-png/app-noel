@@ -19,7 +19,7 @@ window.ROUE_CONFIG = {
   fideliteUrl: "https://www.galzin.fr/fidelite/",
 
   // Lien vers le règlement du jeu (PDF ou page)
-  reglementUrl: "#reglement",
+  reglementUrl: "reglement.html#reglement",
 
   // Lots utilisés UNIQUEMENT en mode démo.
   // En production, les lots viennent de la table Supabase "lots".

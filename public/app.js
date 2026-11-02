@@ -74,6 +74,8 @@
     NOM_INVALIDE: "Merci de renseigner votre prénom et votre nom.",
     CARTE_INVALIDE: "Ce numéro de carte de fidélité ne semble pas valide.",
     PLUS_DE_LOTS: "Tous les cadeaux ont été distribués, merci pour votre participation !",
+    JEU_PAS_COMMENCE: "Patience ! La Roue de Noël ouvre le 1er décembre. Revenez nous voir 🎄",
+    JEU_TERMINE: "La Roue de Noël est terminée. Merci pour votre participation et joyeuses fêtes !",
   };
   const errorText = (e) => ERRORS[e.message] || "Oups, la connexion a échoué. Réessayez dans un instant.";
 

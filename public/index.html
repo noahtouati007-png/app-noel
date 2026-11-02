@@ -33,7 +33,7 @@
       <p class="lead">Une surprise gourmande <em>à chaque tour&nbsp;!</em></p>
       <div class="gift-row" aria-hidden="true"><span>🎁</span><span>🥐</span><span>🎄</span><span>☕</span><span>🎁</span></div>
       <button class="btn btn-main" data-go="s-form">Je tente ma chance</button>
-      <p class="fine">1 participation par carte de fidélité et par jour</p>
+      <p class="fine">Jeu gratuit sans obligation d'achat · 100 % gagnant<br />1 participation par carte de fidélité et par jour</p>
       <a class="btn-ghost js-fidelite" href="https://www.galzin.fr/fidelite/" target="_blank" rel="noopener">
         <small>Pas encore de carte de fidélité&nbsp;?</small>
         <strong>J'active ma carte Galzin →</strong>
@@ -61,8 +61,9 @@
         </label>
         <label class="check">
           <input type="checkbox" name="consent" required />
-          <span>J'accepte le <a id="reglement" href="#" target="_blank" rel="noopener">règlement du jeu</a> et que mes informations soient utilisées par Maison Galzin pour ce jeu.</span>
+          <span>Je certifie être majeur(e) et j'accepte le <a id="reglement" href="reglement.html#reglement" target="_blank" rel="noopener">règlement du jeu</a>.</span>
         </label>
+        <p class="rgpd">Vos prénom, nom et n° de carte sont utilisés par GALZIN GOURMET uniquement pour organiser le jeu, limiter à une participation par jour et vérifier votre gain en caisse. Ils ne servent pas à la prospection et sont supprimés automatiquement après 3 mois. Vous pouvez exercer vos droits (accès, rectification, effacement, opposition) : <a href="reglement.html#donnees" target="_blank" rel="noopener">en savoir plus</a>.</p>
         <p id="form-error" class="error" role="alert" hidden></p>
         <button class="btn btn-main" type="submit">Débloquer la roue</button>
       </form>
@@ -109,8 +110,17 @@
       </div>
       <p class="fine" id="already" hidden>Vous avez déjà joué aujourd'hui avec cette carte : voici votre cadeau du jour. Revenez demain&nbsp;!</p>
       <p class="fine">Joyeuses fêtes de la part de toute l'équipe Galzin 🎄</p>
+      <p class="fine small-print">Lot nominatif, valable le jour du gain, non échangeable ni remboursable. <a href="reglement.html#reglement" target="_blank" rel="noopener">Règlement</a></p>
     </section>
   </main>
+
+  <footer class="legal-links">
+    <a href="reglement.html#reglement">Règlement du jeu</a>
+    <span aria-hidden="true">·</span>
+    <a href="reglement.html#donnees">Données personnelles</a>
+    <span aria-hidden="true">·</span>
+    <a href="reglement.html#mentions">Mentions légales</a>
+  </footer>
 
   <script src="config.js"></script>
   <script src="app.js"></script>

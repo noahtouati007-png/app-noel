@@ -294,3 +294,16 @@ body.is-demo .screen { padding-bottom: 72px; }
 #s-home .t-line { font-size: clamp(48px, 15vw, 80px); }
 #s-home .t-big { font-size: clamp(68px, 22vw, 116px); }
 #s-home .lead { font-size: 20px; }
+
+/* Légal */
+.rgpd { margin: 0; font: 600 italic 12.5px/1.35 "Crimson Pro", serif; color: #8a6a4d; }
+.rgpd a { color: var(--noel); }
+.small-print { font-size: 13px; }
+.small-print a, .legal-links a { color: var(--yellow); }
+.legal-links {
+  position: relative; z-index: 3; text-align: center;
+  padding: 0 16px 18px; margin-top: -30px;
+  font: 600 italic 13px "Crimson Pro", serif; color: var(--cream);
+}
+.legal-links span { opacity: .6; margin: 0 4px; }
+body.is-demo .legal-links { padding-bottom: 46px; }
