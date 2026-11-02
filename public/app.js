@@ -58,11 +58,11 @@
   async function rpc(fn, body) {
     const r = await fetch(`${CFG.supabaseUrl}/rest/v1/rpc/${fn}`, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        apikey: CFG.supabaseKey,
-        Authorization: `Bearer ${CFG.supabaseKey}`,
-      },
+      headers: Object.assign(
+        { "Content-Type": "application/json", apikey: CFG.supabaseKey },
+        // Les anciennes clés "anon" (JWT) vont aussi dans Authorization ; pas les nouvelles sb_publishable_
+        CFG.supabaseKey.startsWith("sb_") ? {} : { Authorization: `Bearer ${CFG.supabaseKey}` }
+      ),
       body: JSON.stringify(body || {}),
     });
     const data = await r.json().catch(() => ({}));

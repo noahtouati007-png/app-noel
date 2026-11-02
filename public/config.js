@@ -5,8 +5,8 @@
 window.ROUE_CONFIG = {
   // Supabase (URL + clé "publishable"/anon). Laisser vide = MODE DÉMO
   // (tirage local, rien n'est enregistré, utile pour tester le design).
-  supabaseUrl: "",
-  supabaseKey: "",
+  supabaseUrl: "https://bfqndpghostgvxgxrtte.supabase.co",
+  supabaseKey: "sb_publishable_EjYE0Gbxt-K6C8vNFsFhKg_OU-9rJW2", // clé publique (faite pour être dans le navigateur)
 
   // QR code à faire scanner en caisse (fourni par Galzin).
   // Remplacer le fichier public/assets/img/qr-caisse.svg (ou .png) et mettre le chemin ici.
